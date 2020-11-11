@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Start page" %}
+{% set pageHeading = "Claim self-isolation payment" %}
 
 {% block pageTitle %}
   {{pageHeading}} | {{serviceName}}
@@ -12,24 +12,66 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-        <h1>
+        <h1 class="nhsuk-heading-xl">
             {{pageHeading}}
-          </h1>
+        </h1>
 
-          <form action="/next-page">
-              {{ input({
-                "label": {
-                  "text": "What is your name?"
-                },
-                "id": "first-name",
-                "name": "first-name",
-                "value": data["first-name"]
-              }) }}
+        <p>
+            This service is to help people that have been notified to self-isolate through <a href="">the NHS Covid-19 app</a>.
+        </p>
 
-              {{ button({
-                "text": "Save and continue"
-              }) }}
-          </form>
+        <h2 class="nhsuk-heading-l">
+            Privacy
+        </h2>
+
+        <p>
+            By using this service, your privacy is not affected:
+        </p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>the app still does not know who you are</li>
+            <li>the app cannot track you</li>
+            <li>your data is not fed back into the app</li>
+        </ul>
+
+        <h2 class="nhsuk-heading-l">
+            Legal
+        </h2>
+
+        <p>
+            If you successfully claim a support payment:
+        </p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>you are legally obliged to self-isolate</li>
+            <li>you cannot claim another payment in the same period</li>
+        </ul>
+        
+        <h2 class="nhsuk-heading-l">
+            Eligibility
+        </h2>
+
+        <p>
+            You may be eligible for a payment, if you:
+        </p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>have been told to self-isolate through the app, through close contact with somebody that has tested positive</li>
+            <li>are employed / self-employed and unable to work from home and suffering a loss of income</li>
+            <li>are currently claiming at least <a href="">one of these benefits</a></li>
+            <li><b>or</b> are on a low income</li>
+        </ul>
+
+        {{ insetText({
+            "HTML": "<p>You'll be asked some questions in the next section</p>"
+          }) }}
+          
+
+        <form action="/eligible-1">
+            {{ button({
+            "text": "Check if you're eligible"
+            }) }}
+        </form>
 
         </div>
     </div>
