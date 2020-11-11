@@ -10,9 +10,11 @@
     - add custom CSS and JavaScript
 -->
 
+{% set pageHeading = "Landing page" %}
+
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  NHS.UK prototype kit
+  {{pageHeading}} | {{serviceName}}
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -49,7 +51,8 @@
       </p>
 
       {{ button({
-        "text": "Start the prototype"
+        "text": "Start the prototype",
+        "href": "start"
       }) }}
 
       <hr>
