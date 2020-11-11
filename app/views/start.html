@@ -15,6 +15,17 @@
         <h1>
             {{pageHeading}}
           </h1>
+
+          {{ input({
+            "label": {
+              "text": "What is your name?"
+            },
+            "id": "first-name",
+            "name": "first-name"
+          }) }}
+
+          {{ data["first-name"]}}
+
         </div>
     </div>
 </div>
