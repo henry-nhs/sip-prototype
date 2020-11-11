@@ -40,7 +40,7 @@ router.get('/eligible-3-backend', function (req, res) {
 
 router.get('/eligible-4-backend', function (req, res) {
     if(req.session.data['elig-benefits'].includes('no-benefit')) {
-            res.redirect('not-eligible');
+            res.redirect('may-be-discretionary');
     } else {
         res.redirect('may-be-eligible');
     }

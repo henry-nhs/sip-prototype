@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "You may be eligible for a discretionary payment" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+
+        <p>
+            Based on your answers, you are not eligible to claim self-isolation payment.
+        </p>
+
+        <p>
+          However, depending on your local authority you may be eligible for a discretionary payment if:
+        </p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>you are on a low income</li>
+          <li><b>or</b> you have recently moved to the UK (no recourse to public funds)</li>
+        </ul>
+
+        {{ insetText({
+          "HTML": "<p>Each local authority will have their own criteria for people to claim a discretionary payment and you are not automatically eligible to it.</p>"
+        }) }}
+
+        {{ warningCallout({
+          "heading": "Fraud statement",
+          "HTML": '<p>By continuing, you are agreeing to:</p> <ul class="nhsuk-list nhsuk-list--bullet"><li>only claim once in a single isolation period</li><li>follow the rules on self-isolation</li></ul>'
+        }) }}
+      
+      {{ checkboxes({
+      "idPrefix": "agree",
+      "name": "agree",
+      "fieldset": {
+          "legend": {
+          "text": 'Do you accept the fraud statement?',
+          "isPageHeading": false,
+          "classes": 'nhsuk-u-visually-hidden'
+          }
+      },
+      "items": [
+          {
+          "value": "true",
+          "html": "I accept the fraud statement"
+          }
+      ]
+      }) }}
+
+      <br>
+
+      <form action="/journey-planner">
+          {{ button({
+          "text": "Start your claim"
+          }) }}
+      </form>
+      </form>
+    </div>
+</div>
+
+{% endblock %}
