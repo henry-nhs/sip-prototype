@@ -16,15 +16,20 @@
             {{pageHeading}}
           </h1>
 
-          {{ input({
-            "label": {
-              "text": "What is your name?"
-            },
-            "id": "first-name",
-            "name": "first-name"
-          }) }}
+          <form action="/next-page">
+              {{ input({
+                "label": {
+                  "text": "What is your name?"
+                },
+                "id": "first-name",
+                "name": "first-name",
+                "value": data["first-name"]
+              }) }}
 
-          {{ data["first-name"]}}
+              {{ button({
+                "text": "Save and continue"
+              }) }}
+          </form>
 
         </div>
     </div>

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Next page" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1>
+            {{pageHeading}}
+        </h1>
+        Your name is: {{ data["first-name"]}}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
