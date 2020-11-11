@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "How to claim self-isolation payment" %}
+{% set pageHeading = serviceName %}
 
 {% block pageTitle %}
   {{pageHeading}} | {{serviceName}}
@@ -16,7 +16,7 @@
             {{pageHeading}}
         </h1>
 
-        
+        <p>"Journey planner" type content will go here</p>
 
         <form action="/nhs-login">
             {{ button({
