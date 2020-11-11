@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Which benefits do you currently receive?" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/eligible-4-backend">
+        {{ checkboxes({
+          "idPrefix": "elig-benefits",
+          "name": "elig-benefits",
+          "fieldset": {
+            "legend": {
+              "text": pageHeading,
+              "classes": "nhsuk-fieldset__legend--l",
+              isPageHeading: true
+            }
+          },
+          "hint": {
+            "text": "You can select more than one."
+          },
+          "items": [
+            {
+              "value": "universal-credit",
+              "text": "Universal Credit"
+            },
+            {
+              "value": "working-tax-credit",
+              "text": "Working Tax Credit"
+            },
+            {
+              "value": "income-based-esa",
+              "text": "Income-based Employment and Support Allowance"
+            },
+            {
+              "value": "income-based-jsa",
+              "text": "Income-based Jobseeker’s Allowance"
+            },
+            {
+              "value": "income-support",
+              "text": "Income Support"
+            },
+            {
+              "value": "housing-benefit",
+              "text": "Housing Benefit"
+            },
+            {
+              "value": "pension-credit",
+              "text": "Pension Credit"
+            },
+            {
+              "value": "no-benefit",
+              "text": "I don't currently receive any of these benefits"
+            }
+          ]
+        }) }}
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}

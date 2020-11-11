@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Are you able to work from home?" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/eligible-2-backend">
+        {{ radios({
+          "idPrefix": "elig-wfh",
+          "name": "elig-wfh",
+          "fieldset": {
+            "legend": {
+              "text": pageHeading,
+              "classes": "nhsuk-fieldset__legend--l",
+              "isPageHeading": true
+            }
+          },
+          "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+          ]
+        }) }}
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}
