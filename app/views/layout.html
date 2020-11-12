@@ -20,6 +20,17 @@
 <!-- Header goes inside the header block -->
 <!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
 {% block header %}
+  {% if falseServiceName %}
+  {{ header({
+    "service": {
+        "name": falseServiceName,
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+  {% else %}
   {{ header({
     "service": {
         "name": serviceName,
@@ -29,6 +40,7 @@
       "showSearch": "false"
     })
   }}
+  {% endif %}
 {% endblock %}
 
 <!-- Footer goes inside the footer block -->

@@ -19,8 +19,13 @@
         <p>"Journey planner" type content will go here</p>
 
         <form action="/nhs-login">
+
+            {{ insetText({
+                "HTML": "<p>If you don't already have an NHS login account, you can create one on the next page.</p>"
+            }) }}
+
             {{ button({
-            "text": "Continue"
+            "text": "Continue with NHS login"
             }) }}
         </form>
 

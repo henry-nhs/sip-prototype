@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Login or create an account" %}
+{% set falseServiceName = "NHS login" %}
+
+{% block pageTitle %}
+  {{pageHeading}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/personal-details">
+
+        <h1 class="nhsuk-heading-xl">
+          {{pageHeading}}
+        </h1>
+        
+        {{ input({
+          "label": {
+            "text": "Email address or phone number"
+          },
+          "id": "nhs-login-id",
+          "name": "nhs-login-id"
+        }) }}
+
+        {% set passwordHtml %}
+          {{ input({
+            id: "nhs-login-password",
+            name: "nhs-login-password",
+            type: "password",
+            label: {
+              text: "Password"
+            }
+          }) }}
+        {% endset -%}
+
+        {{ radios({
+          "idPrefix": "has-nhs-login",
+          "name": "has-nhs-login",
+          "fieldset": {
+            "legend": {
+              "text": "Do you have an NHS login account?",
+              "classes": "nhsuk-fieldset__legend--m",
+              "isPageHeading": "false"
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              "conditional": {
+                "html": passwordHtml
+              }
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        }) }}
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}

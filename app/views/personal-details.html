@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Enter your personal details" %}
+
+{% block pageTitle %}
+  {{pageHeading}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/personal-details">
+
+        <h1 class="nhsuk-heading-xl">
+          {{pageHeading}}
+        </h1>
+        
+        {{ input({
+          "label": {
+            "text": "First name"
+          },
+          "id": "first-name",
+          "name": "first-name"
+        }) }}
+
+        {{ input({
+          "label": {
+            "text": "Last name"
+          },
+          "id": "last-name",
+          "name": "last-name"
+        }) }}
+
+        {{ input({
+          "label": {
+            "text": "Email address"
+          },
+          "id": "email-address",
+          "name": "email-address",
+          "type": "email"
+        }) }}
+
+        {{ input({
+          "label": {
+            "text": "Phone number"
+          },
+          "id": "phone-number",
+          "name": "phone-number",
+          "type": "tel"
+        }) }}
+
+        {{ input({
+          "label": {
+            "text": "Postcode"
+          },
+            "hint": {
+            "text": "For example, SW1A 1AA"
+          },
+          "id": "postcode",
+          "name": "postcode",
+          "classes": "nhsuk-input--width-10"
+        }) }}
+
+        <br>
+
+        {{ checkboxes({
+          "idPrefix": "agree",
+          "name": "agree",
+          "fieldset": {
+              "legend": {
+              "text": 'Are you aged 18 or over?',
+              "isPageHeading": false,
+              "classes": 'nhsuk-u-visually-hidden'
+              }
+          },
+          "items": [
+              {
+              "value": "true",
+              "html": "I confirm that I'm at least 18 years old"
+              }
+          ]
+          }) }}
+
+        <br>
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}
