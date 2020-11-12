@@ -19,3 +19,12 @@
         padding-left: 20px;
     }
 }
+
+.button--nhs-login {
+    background-color: $nhsuk-link-color;
+    box-shadow: 0 4px 0 darken($nhsuk-link-color, 15%);
+    &:active {
+        background-color: darken($nhsuk-link-color, 5%);
+        box-shadow: 0 4px 0 darken($nhsuk-link-color, 5%);
+    }
+}
