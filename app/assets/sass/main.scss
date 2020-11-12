@@ -21,8 +21,12 @@
 }
 
 .button--nhs-login {
+    background: url(../images/nhs-logo-white.svg) no-repeat;
+    background-size: 50px 20px;
+    background-position: 15px 53%;
     background-color: $nhsuk-link-color;
     box-shadow: 0 4px 0 darken($nhsuk-link-color, 15%);
+    padding-left: 80px;
     &:active {
         background-color: darken($nhsuk-link-color, 5%);
         box-shadow: 0 4px 0 darken($nhsuk-link-color, 5%);

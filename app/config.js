@@ -2,7 +2,7 @@
 
 module.exports = {
   // Service name
-  serviceName: 'Claim Test and Trace Support Payment',
+  serviceName: 'Apply for a Test and Trace Support Payment',
 
   // Port to run nodemon on locally
   port: 2000,
