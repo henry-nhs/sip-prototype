@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "What happens next" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+
+        <p class="nhsuk-lede-text">
+            Thanks, 
+            {% if data['first-name'] %}
+                {{data['first-name']}}.
+            {% else %}
+                John.
+            {% endif %}
+            Your details have now been sent to the Contact Tracing and Advisory Service (CTAS).
+        </p>
+
+        <h2 class="nhsuk-heading-l">
+            Check your emails and text messages
+        </h2>
+
+        <p>CTAS should contact you within 30 minutes, with a link to continue with your claim.</p>
+
+        <p>Check your spam or junk inbox as emails can sometimes end up there.</p>
+
+        {{ insetText({
+            "HTML": "<p>If you do not hear from CTAS after 2 hours, <a href=''>contact them</a>.</p>"
+          }) }}
+
+        <h2 class="nhsuk-heading-l">
+            Continue to self-isolate
+        </h2>
+
+        <p>You are legally obliged to self-isolate after claiming Test and Trace Support Payment.</p>
+
+        <p>The app still does not know who you are and cannot track you.</p>
+
+
+        <form action="/ctas">
+
+            {{ insetText({
+                "HTML": "<p>You will now be taken to the CTAS website, to continue your claim.</p>"
+              }) }}
+
+            {{ button({
+            "text": "Continue on CTAS"
+            }) }}
+        </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
