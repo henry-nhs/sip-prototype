@@ -16,7 +16,79 @@
             {{pageHeading}}
         </h1>
 
-        <p>"Journey planner" type content will go here</p>
+        <p>To claim a payment, you need to complete some steps using different services.</p>
+
+        <p>We have tried to outline them here, but depending on your local authority and personal situation the steps may be different.</p>
+
+        {{ list({
+            "classes": "sip-info-card",
+            "title": "1. NHS login",
+            "type": "info",
+            "items": [
+              {
+                "item": "You need to use NHS login, to help us prove you are who you say you are"
+              }
+            ]
+          }) }}
+
+        {{ list({
+            "classes": "sip-info-card",
+            "title": "2. Enter personal details",
+            "type": "info",
+            "items": [
+              {
+                "item": "We'll ask for your name, email, phone number and postcode"
+              }
+            ]
+          }) }}
+
+        {{ list({
+            "classes": "sip-info-card",
+            "title": "3. Contact Tracing and Advisory Service (CTAS)",
+            "type": "info",
+            "items": [
+              {
+                "item": "You will receive an email and text message (SMS)"
+              },
+              {
+                "item": "You'll need to register for CTAS (if you haven't already)"
+              },
+              {
+                "item": "This service will ask you for your personal details again, to avoid duplicate applications"
+              },
+              {
+                "item": "You should be provided with a CTAS number or ID"
+              }
+            ]
+          }) }}
+
+        {{ list({
+            "classes": "sip-info-card",
+            "title": "4. Your local authority",
+            "type": "info",
+            "items": [
+              {
+                "item": "You should be sent a link to your local authority's website"
+              },
+              {
+                "item": "Your local authority will ask you for your CTAS number or ID"
+              },
+              {
+                "item": "They may ask you for proof of identity, benefit (if applicable), employment status and bank account details"
+              }
+            ]
+          }) }}
+
+          {{ list({
+            "classes": "sip-info-card",
+            "title": "5. Your payment",
+            "type": "info",
+            "items": [
+              {
+                "item": "If successful, you should receive a payment from your local authority"
+              }
+            ]
+          }) }}
 
         <form action="/nhs-login">
 

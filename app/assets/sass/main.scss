@@ -7,3 +7,15 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
+
+.sip-info-card {
+    svg {
+        display: none;
+    }
+
+    .nhsuk-list--tick, 
+    .nhsuk-list--cross {
+        list-style: disc;
+        padding-left: 20px;
+    }
+}
