@@ -28,13 +28,6 @@
             You will need to answer some questions in the next section to check whether you could be eligible.
         </p>
 
-        <form action="/eligible-1">
-            {{ actionLink({
-            "text": "Start now",
-            "href": "/eligible-1"
-            }) }}
-        </form>
-
         <h2 class="nhsuk-heading-l">
             Before you start
         </h2>
@@ -48,6 +41,13 @@
         <p>
             The app cannot be used to track you, and the personal details you provide to this service will not be held anywhere in the app.
         </p>
+
+        <form action="/eligible-1">
+            {{ button({
+            "text": "Start now",
+            "href": "/eligible-1"
+            }) }}
+        </form>
 
     </div>
 </div>
