@@ -16,84 +16,61 @@
             {{pageHeading}}
         </h1>
 
-        <p>To apply for a payment, you need to complete some steps using different services.</p>
+        <p>To apply for this payment, you will need to complete the following steps.</p>
 
-        <p>We have tried to outline them here, but depending on your local authority and personal situation the steps may be different.</p>
+        <p>These steps may vary depending on your local authority.</p>
 
-        {{ list({
-            "classes": "sip-info-card",
-            "title": "1. NHS login",
-            "type": "info",
-            "items": [
-              {
-                "item": "You need to use NHS login, to help us prove you are who you say you are"
-              }
-            ]
-          }) }}
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label">1. NHS login</h3>
+            <p>Log in or register for an NHS account so we can check who you are.</p>
+        </div>
 
-        {{ list({
-            "classes": "sip-info-card",
-            "title": "2. Enter personal details",
-            "type": "info",
-            "items": [
-              {
-                "item": "We'll ask for your name, email, phone number and postcode"
-              }
-            ]
-          }) }}
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label">2. Enter personal details</h3>
+            <p>You will be asked to enter your name, email, phone number and postcode.</p>
+        </div>
 
-        {{ list({
-            "classes": "sip-info-card",
-            "title": "3. Contact Tracing and Advisory Service (CTAS)",
-            "type": "info",
-            "items": [
-              {
-                "item": "You will receive an email and text message (SMS)"
-              },
-              {
-                "item": "You'll need to register for CTAS (if you haven't already)"
-              },
-              {
-                "item": "This service will ask you for your personal details again, to avoid duplicate applications"
-              },
-              {
-                "item": "You should be provided with a CTAS number or ID"
-              }
-            ]
-          }) }}
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label">3. NHS Test and Trace</h3>
+            <p>
+                You will receive an email and text message from NHS Test and Trace (this usually takes around 30 minutes)
+            </p>
+            <p>
+                You will need to enter some personal details to register for NHS Test and Trace if you haven’t already done this
+            </p>
+            <p>
+                When you’ve registered, you’ll receive an account number (sometimes known as a CTAS number)
+            </p>
+        </div>
 
-        {{ list({
-            "classes": "sip-info-card",
-            "title": "4. Your local authority",
-            "type": "info",
-            "items": [
-              {
-                "item": "You should be sent a link to your local authority's website"
-              },
-              {
-                "item": "Your local authority will ask you for your CTAS number or ID"
-              },
-              {
-                "item": "They may ask you for proof of identity, benefit, employment status and bank account details"
-              }
-            ]
-          }) }}
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label">4. Your local authority</h3>
+            <p>You’ll receive a link to your local authority’s website by email. Your local authority will ask you for your account number (CTAS number). They may also ask you for:</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>
+                    proof of your identity
+                </li>
+                <li>
+                    proof of benefits you’ve received
+                </li>
+                <li>
+                    your employment details (including national insurance number)
+                </li>
+                <li>
+                    your bank account details
+                </li>
+            </ul>
+        </div>
 
-          {{ list({
-            "classes": "sip-info-card",
-            "title": "5. Your payment",
-            "type": "info",
-            "items": [
-              {
-                "item": "If successful, you should receive a payment from your local authority"
-              }
-            ]
-          }) }}
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label">5. Your payment</h3>
+            <p>If your application is successful, you will receive the Test and Trace Support Payment from your local authority.</p>
+        </div>
 
         <form action="/nhs-login">
 
             {{ insetText({
-                "HTML": "<p>If you don't already have an NHS login account, you can create one on the next page.</p>"
+                "HTML": "<p>If you do not already have an NHS login, you can create one on the next page.</p>"
             }) }}
 
             {{ button({
