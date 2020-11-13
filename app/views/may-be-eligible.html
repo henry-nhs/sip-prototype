@@ -16,9 +16,16 @@
             {{pageHeading}}
         </h1>
 
+        {% if data['elig-discretionary'] == "true" %}
         <p>
-            Based on the information you’ve given, you may be eligible for a Test and Trace Support Payment or a discretionary payment from your local authority.
+            Based on your answers, you may be eligible for a discretionary payment from your local authority.
         </p>
+        {% else %}
+        <p>
+            Based on your answers, you may be eligible for a Test and Trace Support Payment.
+        </p>
+        {% endif %}
+        
 
         <!-- <h2 class="nhsuk-heading-l">Fraud statement</h2> -->
 

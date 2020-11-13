@@ -44,6 +44,7 @@ router.get('/eligible-4-backend', function (req, res) {
             res.redirect('may-be-eligible');
             break;
         default:
+            req.session.data['elig-discretionary'] = "false";
             res.redirect('may-be-eligible');
             break;
     }
