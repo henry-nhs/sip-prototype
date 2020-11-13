@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Create a password" %}
+{% set falseServiceName = "NHS login" %}
+
+{% block pageTitle %}
+  {{pageHeading}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/nhs-login-checkemail">
+
+        <h1 class="nhsuk-heading-xl">
+          {{pageHeading}}
+        </h1>
+        
+        {{ input({
+          "label": {
+            "text": "Create a password"
+          },
+            "hint": {
+            "html": "<p>Your password must have:</p><ul><li>8 characters or more</li><li>1 capital letter or more</li></ul>"
+          },
+          "id": "nhs-password",
+          "name": "nhs-password",
+          "type": "password"
+        }) }}
+
+        {{ input({
+          "label": {
+            "text": "Confirm password"
+          },
+          "id": "nhs-password-confirm",
+          "name": "nhs-password-confirm",
+          "type": "password"
+        }) }}
+
+        <h2 class="nhsuk-heading-s">
+          Agree to our terms of use​
+        </h2>
+
+        <p>
+          We will collect and save your information securely. We will not share your personal information without your consent.
+        </p>
+
+        <p>
+          By continuing you confirm that you agree to our privacy notice and terms and conditions.
+        </p>
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+        
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}

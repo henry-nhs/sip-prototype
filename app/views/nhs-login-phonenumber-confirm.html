@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Check your mobile phone" %}
+{% set falseServiceName = "NHS login" %}
+
+{% block pageTitle %}
+  {{pageHeading}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/nhs-login-success">
+
+        <h1 class="nhsuk-heading-xl">
+          {{pageHeading}}
+        </h1>
+        
+        <p>
+          Enter the 6 digit security code we've sent to {% if data["nhs-phone-number"] %}{{data["nhs-phone-number"]}}{% else %}07890123456{% endif %}
+        </p>
+
+        {{ input({
+          "label": {
+            "text": "Security code"
+          },
+          "hint": {
+            "text": "The code is 6 numbers"
+          },
+          "id": "nhs-sec-code",
+          "name": "nhs-sec-code",
+          "type": "tel",
+          "classes": "nhsuk-input--width-10",
+          "attrs": {
+            "maxlength": 6
+          }
+        }) }}
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+        <p>
+          If you do not get a code, you can <a href="nhs-login-phonenumber">enter your mobile number to try again</a>.
+        </p>
+       
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}

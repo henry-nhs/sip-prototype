@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Check your email" %}
+{% set falseServiceName = "NHS login" %}
+
+{% block pageTitle %}
+  {{pageHeading}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/nhs-login-phonenumber">
+
+        <h1 class="nhsuk-heading-xl">
+          {{pageHeading}}
+        </h1>
+        
+        <p>
+          We have sent an email to {% if data["nhs-login-id"] %}{{data["nhs-login-id"]}}{% else %}mail@mail.com{% endif %}
+        </p>
+
+        <p>
+          Select confirm in the email and come back to this screen.
+        </p>
+
+        {{ button({
+          "text": "I have confirmed my email"
+        }) }}
+
+        <p>
+          You can <a href="nhs-login">enter your email address again</a> if you got it wrong.
+        </p>
+
+        <p>
+          Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.
+        </p>
+
+        
+
+        
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}

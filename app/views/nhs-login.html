@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Login or create an account" %}
+{% set pageHeading = "Enter your email address" %}
 {% set falseServiceName = "NHS login" %}
 
 {% block pageTitle %}
@@ -13,7 +13,7 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form action="/personal-details">
+      <form action="/nhs-login-1">
 
         <h1 class="nhsuk-heading-xl">
           {{pageHeading}}
@@ -21,52 +21,27 @@
         
         {{ input({
           "label": {
-            "text": "Email address or phone number"
+            "text": "Email address"
           },
           "id": "nhs-login-id",
           "name": "nhs-login-id"
         }) }}
 
-        {% set passwordHtml %}
-          {{ input({
-            id: "nhs-login-password",
-            name: "nhs-login-password",
-            type: "password",
-            label: {
-              text: "Password"
-            }
-          }) }}
-        {% endset -%}
-
-        {{ radios({
-          "idPrefix": "has-nhs-login",
-          "name": "has-nhs-login",
-          "fieldset": {
-            "legend": {
-              "text": "Do you have an NHS login account?",
-              "classes": "nhsuk-fieldset__legend--m",
-              "isPageHeading": "false"
-            }
-          },
-          "items": [
-            {
-              "value": "yes",
-              "text": "Yes",
-              "conditional": {
-                "html": passwordHtml
-              }
-            },
-            {
-              "value": "no",
-              "text": "No"
-            }
-          ]
-        }) }}
-        
-
         {{ button({
           "text": "Continue"
         }) }}
+
+        {{ insetText({
+          "HTML": "<h3>What is NHS login?</h3><p>You can use your NHS login to access health websites and apps that have the NHS login button. If you do not have an NHS login, enter your email address to set one up.</p>"
+        }) }}
+
+        {{ warningCallout({
+          "heading": "Coronavirus (COVID-19)",
+          "HTML": "<p>For health information and advice, read <a href=''>NHS guidance about Coronavirus</a></p>"
+        }) }}
+        
+
+        
       </form>
         
         

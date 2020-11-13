@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Enter your mobile number" %}
+{% set falseServiceName = "NHS login" %}
+
+{% block pageTitle %}
+  {{pageHeading}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/nhs-login-phonenumber-confirm">
+
+        <h1 class="nhsuk-heading-xl">
+          {{pageHeading}}
+        </h1>
+        
+        <p>
+          We will send you a 6 digit security code.
+        </p>
+
+        {{ input({
+          "label": {
+            "text": "UK mobile number"
+          },
+          "id": "nhs-phone-number",
+          "name": "nhs-phone-number",
+          "type": "tel"
+        }) }}
+
+        {{ checkboxes({
+          "idPrefix": "nhs-phone-international",
+          "name": "nhs-phone-international",
+          "fieldset": {
+              "legend": {
+              "text": 'Do you have an international mobile number?',
+              "isPageHeading": false,
+              "classes": 'nhsuk-u-visually-hidden'
+              }
+          },
+          "items": [
+              {
+              "value": "true",
+              "html": "I have an international mobile number"
+              }
+          ]
+          }) }}
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+       
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}
