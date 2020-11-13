@@ -13,45 +13,41 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <form action="/eligible-4-backend">
-        <h1 class="nhsuk-heading-l">
-          {{pageHeading}}
-        </h1>
-
-        <p>If you receive one of these benefits, you may be eligible for a payment:</p>
-
-        <ul class="nhs-list nhsuk-list--bullet">
-          <li>
-            Universal Credit
-          </li>
-          <li>
-            Working Tax Credit
-          </li>
-          <li>
-            Income-based Employment and Support Allowance
-          </li>
-          <li>
-            Income-based Jobseeker’s Allowance
-          </li>
-          <li>
-            Income Support
-          </li>
-          <li>
-            Housing Benefit
-          </li>
-          <li>
-            Pension Credit
-          </li>
-        </ul>
 
         {{ radios({
           "idPrefix": "elig-benefits",
           "name": "elig-benefits",
           "fieldset": {
             "legend": {
-              "text": "Do you receive any of these benefits?",
-              "classes": "nhsuk-fieldset__legend--m",
+              "text": "Do you receive any of the following benefits?",
+              "classes": "nhsuk-fieldset__legend--l",
               "isPageHeading": true
             }
+          },
+          "hint": {
+            "html": "<ul class='nhs-list nhsuk-list--bullet'>
+              <li>
+                Universal Credit
+              </li>
+              <li>
+                Working Tax Credit
+              </li>
+              <li>
+                Income-based Employment and Support Allowance
+              </li>
+              <li>
+                Income-based Jobseeker’s Allowance
+              </li>
+              <li>
+                Income Support
+              </li>
+              <li>
+                Housing Benefit
+              </li>
+              <li>
+                Pension Credit
+              </li>
+            </ul>"
           },
           "items": [
           {
