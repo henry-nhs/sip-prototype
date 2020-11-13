@@ -17,14 +17,14 @@
         </h1>
 
         <p>
-            Based on your answers, you might be eligible to apply for a payment.
+            Based on the information you’ve given, you may be eligible for a Test and Trace Support Payment or a discretionary payment from your local authority.
         </p>
 
         <!-- <h2 class="nhsuk-heading-l">Fraud statement</h2> -->
 
         {{ warningCallout({
-            "heading": "Fraud statement",
-            "HTML": '<p>By continuing, you are agreeing to:</p> <ul class="nhsuk-list nhsuk-list--bullet"><li>only apply for a payment once in a single isolation period</li><li>follow the rules on self-isolation</li></ul>'
+            "heading": "Fraud",
+            "HTML": '<p>If you are caught committing fraud to claim this payment, you will face prosecution and the money will be recovered from you.</p><p>This could include giving false information, failing to self-isolate or claiming the payment more than once for the same self-isolation period.</p>'
           }) }}
         
         {{ checkboxes({
@@ -32,7 +32,7 @@
         "name": "agree",
         "fieldset": {
             "legend": {
-            "text": 'Do you accept the fraud statement?',
+            "text": 'Do you understand and accept this information?',
             "isPageHeading": false,
             "classes": 'nhsuk-u-visually-hidden'
             }
@@ -40,7 +40,7 @@
         "items": [
             {
             "value": "true",
-            "html": "I accept the fraud statement"
+            "html": "I understand and accept this information"
             }
         ]
         }) }}
@@ -49,7 +49,7 @@
 
         <form action="/journey-planner">
             {{ button({
-            "text": "Start your application"
+            "text": "Apply for a payment"
             }) }}
         </form>
 
