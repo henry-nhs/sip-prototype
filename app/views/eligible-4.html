@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Which benefits do you currently receive?" %}
+{% set pageHeading = "Benefits" %}
 
 {% block pageTitle %}
   {{pageHeading}} | {{serviceName}}
@@ -13,55 +13,55 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <form action="/eligible-4-backend">
-        {{ checkboxes({
+        <h1 class="nhsuk-heading-l">
+          {{pageHeading}}
+        </h1>
+
+        <p>If you receive one of these benefits, you may be eligible for a payment:</p>
+
+        <ul class="nhs-list nhsuk-list--bullet">
+          <li>
+            Universal Credit
+          </li>
+          <li>
+            Working Tax Credit
+          </li>
+          <li>
+            Income-based Employment and Support Allowance
+          </li>
+          <li>
+            Income-based Jobseeker’s Allowance
+          </li>
+          <li>
+            Income Support
+          </li>
+          <li>
+            Housing Benefit
+          </li>
+          <li>
+            Pension Credit
+          </li>
+        </ul>
+
+        {{ radios({
           "idPrefix": "elig-benefits",
           "name": "elig-benefits",
           "fieldset": {
             "legend": {
-              "text": pageHeading,
-              "classes": "nhsuk-fieldset__legend--l",
-              isPageHeading: true
+              "text": "Do you receive any of these benefits?",
+              "classes": "nhsuk-fieldset__legend--m",
+              "isPageHeading": true
             }
-          },
-          "hint": {
-            "text": "You can select more than one."
           },
           "items": [
-            {
-              "value": "universal-credit",
-              "text": "Universal Credit"
-            },
-            {
-              "value": "working-tax-credit",
-              "text": "Working Tax Credit"
-            },
-            {
-              "value": "income-based-esa",
-              "text": "Income-based Employment and Support Allowance"
-            },
-            {
-              "value": "income-based-jsa",
-              "text": "Income-based Jobseeker’s Allowance"
-            },
-            {
-              "value": "income-support",
-              "text": "Income Support"
-            },
-            {
-              "value": "housing-benefit",
-              "text": "Housing Benefit"
-            },
-            {
-              "value": "pension-credit",
-              "text": "Pension Credit"
-            },
-            {
-              "divider": "or"
-            },
-            {
-              "value": "no-benefit",
-              "text": "I do not receive any of these benefits"
-            }
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
           ]
         }) }}
 

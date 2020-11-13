@@ -10,7 +10,6 @@ router.get('/eligible-1-backend', function (req, res) {
             res.redirect('not-eligible');
             break;
         default:
-            //   req.session.data['diversity-parents-completed'] = "true";
             res.redirect('eligible-2');
             break;
     }
@@ -39,10 +38,14 @@ router.get('/eligible-3-backend', function (req, res) {
 });
 
 router.get('/eligible-4-backend', function (req, res) {
-    if(req.session.data['elig-benefits'].includes('no-benefit')) {
-            res.redirect('may-be-discretionary');
-    } else {
-        res.redirect('may-be-eligible');
+    switch (req.session.data['elig-benefits']) {
+        case "no":
+            req.session.data['elig-discretionary'] = "true";
+            res.redirect('may-be-eligible');
+            break;
+        default:
+            res.redirect('may-be-eligible');
+            break;
     }
 });
 
