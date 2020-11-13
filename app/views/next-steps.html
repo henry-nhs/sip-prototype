@@ -17,46 +17,41 @@
         </h1>
 
         <p class="nhsuk-lede-text">
-            Thanks, 
-            {% if data['first-name'] %}
-                {{data['first-name']}}.
-            {% else %}
-                John.
-            {% endif %}
-            Your details have now been sent to the Contact Tracing and Advisory Service (CTAS).
+            Your details have now been sent to NHS Test and Trace.
         </p>
 
         <h2 class="nhsuk-heading-l">
-            Check your emails and text messages
+            You will receive an email and text message
         </h2>
 
-        <p>CTAS should contact you within 30 minutes, with a link to continue with your application.</p>
+        <p>
+            NHS Test and Trace should send you an email and text message within the next 30 minutes.
+        </p>
+        <p>
+            This will include a link to continue your application.
+        </p>
 
-        <p>Check your spam or junk inbox as emails can sometimes end up there.</p>
+        <p>
+            If you cannot find the email, you should check your junk mail or spam folder.
+        </p>
 
         {{ insetText({
-            "HTML": "<p>If you do not hear from CTAS after 2 hours, <a href=''>contact them</a>.</p>"
+            "HTML": "<p>If you do not receive an email or text message within 2 hours, you should <a href='?'>contact NHS Test and Trace</a>.</p>"
           }) }}
 
         <h2 class="nhsuk-heading-l">
             Continue to self-isolate
         </h2>
 
-        <p>You are legally obliged to self-isolate after applying for a Test and Trace Support Payment.</p>
+        <p>After applying for the payment, you will be legally required to self-isolate and may face a penalty of at least £1,000 if you do not comply.</p>
 
-        <p>The app still does not know who you are and cannot track you.</p>
+        <p>The app still cannot be used to track you.</p>
 
+        <p>You do not need to take a test unless you have symptoms.</p>
 
-        <form action="/ctas">
-
-            {{ insetText({
-                "HTML": "<p>You will now be taken to the CTAS website, to continue your application.</p>"
-              }) }}
-
-            {{ button({
-            "text": "Continue on CTAS"
-            }) }}
-        </form>
+        {{ insetText({
+            "HTML": "<p>You can close this page and continue when you receive link from NHS Test and Trace.</p>"
+          }) }}
 
         </div>
     </div>
