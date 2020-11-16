@@ -17,6 +17,10 @@
         <h1 class="nhsuk-heading-xl">
           {{pageHeading}}
         </h1>
+
+        {{ insetText({
+          "HTML": "<p>The personal details you provide in this service will not be held anywhere in the app.</p>"
+      }) }}
         
         {{ input({
           "label": {
@@ -40,10 +44,10 @@
 
         {{ input({
           "label": {
-            "text": "Full home postcode"
+            "text": "Full postcode"
           },
             "hint": {
-            "text": "For example, SW1A 1AA"
+            "html": "For example, SW1A 1AA. <br> You must use the postcode for your home address, even if this is different to the postcode you entered in the app."
           },
           "id": "postcode",
           "name": "postcode",

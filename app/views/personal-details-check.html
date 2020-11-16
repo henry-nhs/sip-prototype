@@ -17,6 +17,10 @@
         <h1 class="nhsuk-heading-xl">
           {{pageHeading}}
         </h1>
+
+        {{ insetText({
+          "HTML": "<p>The personal details you provide in this service will not be held anywhere in the app.</p>"
+      }) }}
         
         {{ summaryList({
           rows: [
@@ -39,7 +43,7 @@
             },
             {
               key: {
-                text: "Full home postcode"
+                text: "Full postcode"
               },
               value: {
                 text: data["postcode"]

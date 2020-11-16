@@ -35,7 +35,7 @@
             <h3 class="nhsuk-heading-s">You will receive an email and text message</h3>
             <div class="nhs-sip-text-with-icon nhs-sip-email-icon">
                 <p>
-                    NHS Test and Trace should send you an email and text message within the next 30 minutes.
+                    NHS Test and Trace will send you an email and text message within the next 30 minutes.
                 </p>
                 <p>
                     If you cannot find the email, you should check your junk mail or spam folder.
@@ -46,11 +46,12 @@
                     This will include a link to continue your application.
                 </p>
             </div>
+            {{ insetText({
+                "HTML": "<p>If you do not receive an email or text message within 2 hours, you should <a href='help-support'>check the help and support section</a>.</p>"
+              }) }}
         </div>
 
-        {{ insetText({
-            "HTML": "<p>If you do not receive an email or text message within 2 hours, you should <a href='help-support'>check the help and support section</a>.</p>"
-          }) }}
+        
 
         <h2 class="nhsuk-heading-l">
             Continue to self-isolate
@@ -65,6 +66,8 @@
         {{ insetText({
             "HTML": "<p>You can close this page and continue when you receive your link from NHS Test and Trace.</p>"
           }) }}
+        
+          
 
         </div>
     </div>
