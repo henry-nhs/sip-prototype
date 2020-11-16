@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Your application is in progress" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+
+        <p>
+          You have already started an application and it is in progress with NHS Test and Trace.
+        </p>
+
+        <p>
+          You can only apply once in the same isolation period. If you think something is wrong, <a href="help-support">visit help and support</a>.
+        </p>
+    
+
+    </div>
+</div>
+
+{% endblock %}
