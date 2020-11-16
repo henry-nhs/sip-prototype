@@ -18,35 +18,63 @@
 
         <p>To apply for this payment, you will need to complete the following steps. Read these carefully before you continue.</p>
 
+        {{ contentsList({
+            items: [
+              {
+                href: "#step-1",
+                text: "1. " + step1Label,
+                current: "true"
+              },
+              {
+                href: "#step-2",
+                text: "2. " + step2Label
+              },
+              {
+                href: "#step-3",
+                text: "3. " + step3Label
+              }
+              ,
+              {
+                href: "#step-4",
+                text: "4. " + step4Label
+              }
+              ,
+              {
+                href: "#step-5",
+                text: "5. " + step5Label
+              }
+            ]
+          }) }}
+
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h2 class="nhsuk-do-dont-list__label">1. {{step1Label}}</h2>
+            <h2 class="nhsuk-do-dont-list__label" id="step-1">1. {{step1Label}}</h2>
             <p>Log in or register with NHS login so we can check who you are.</p>
             <p>If you are registering, you will receive a confirmation link in an email.</p>
             <p>When you read the email, make sure you keep this screen open so that you can continue to the next step.</p>
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h2 class="nhsuk-do-dont-list__label">2. {{step2Label}}</h2>
+            <h2 class="nhsuk-do-dont-list__label" id="step-2">2. {{step2Label}}</h2>
             <p>You will be asked to enter your name and postcode so that NHS Test and Trace can carry out some checks.</p>
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h2 class="nhsuk-do-dont-list__label">3. {{step3Label}}</h2>
+            <h2 class="nhsuk-do-dont-list__label" id="step-3">3. {{step3Label}}</h2>
             <p>
-                You will receive an email and text message from NHS Test and Trace (this usually takes around 30 minutes).
+                You will receive an email and text message from NHS Test and Trace.
             </p>
             <p>
                 You will need to enter some personal details to register for NHS Test and Trace if you haven’t already done this.
             </p>
             <p>
-                When you’ve registered, you’ll receive an account number (sometimes known as a CTAS number).
+                When you’ve registered, you’ll receive an NHS Test and Trace Account ID (sometimes known as an account number or CTAS number). At this point, you will be legally required to self-isolate and may face a penalty of at least £1,000 if you do not comply.
             </p>
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h2 class="nhsuk-do-dont-list__label">4. {{step4Label}}</h2>
-            <p>You’ll receive a link to your local authority’s website.</p>
-            <p>Your local authority will ask you for your NHS Test and Trace ID - the 8-digit number you receive when you have registered with NHS Test and Trace. Your local authority may call this something slightly different, such as an account number or CTAS number.</p>
+            <h2 class="nhsuk-do-dont-list__label" id="step-4">4. {{step4Label}}</h2>
+            <p><a href="https://www.gov.uk/test-and-trace-support-payment#apply-through-your-council">Visit your local authority’s website</a> to apply for the payment.</p>
+            <p>Your local authority will ask you for your NHS Test and Trace Account ID - the 8-digit number you receive when you register with NHS Test and Trace. Your local authority may call this something different, such as an account number or CTAS number.</p>
             <p>They will also ask you for at least:</p>
             <ul class="nhsuk-list nhsuk-list--bullet">
                 <li>
@@ -65,7 +93,7 @@
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h2 class="nhsuk-do-dont-list__label">5. {{step5Label}}</h2>
+            <h2 class="nhsuk-do-dont-list__label" id="step-5">5. {{step5Label}}</h2>
             <p>If your application is successful, you will receive the Test and Trace Support Payment from your local authority.</p>
         </div>
 
