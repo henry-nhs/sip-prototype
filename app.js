@@ -42,6 +42,11 @@ app.locals.asset_path = '/public/'
 app.locals.useAutoStoreData = (useAutoStoreData === 'true')
 app.locals.useCookieSessionStore = (useCookieSessionStore === 'true')
 app.locals.serviceName = config.serviceName
+app.locals.step1Label = config.step1Label
+app.locals.step2Label = config.step2Label
+app.locals.step3Label = config.step3Label
+app.locals.step4Label = config.step4Label
+app.locals.step5Label = config.step5Label
 
 
 // Nunjucks configuration for application

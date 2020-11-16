@@ -35,3 +35,18 @@
         box-shadow: 0 4px 0 darken($nhsuk-link-color, 5%);
     }
 }
+
+.nhs-sip-text-with-icon {
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 0 5px;
+    padding-left: 40px;
+}
+
+.nhs-sip-email-icon {
+    background-image: url(../images/mail-icon.svg);
+}
+
+.nhs-sip-link-icon {
+    background-image: url(../images/link-icon.svg);
+}

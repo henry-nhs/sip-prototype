@@ -4,6 +4,12 @@ module.exports = {
   // Service name
   serviceName: 'Apply for a Test and Trace Support Payment',
 
+  step1Label: 'Register with NHS login',
+  step2Label: 'Enter personal details',
+  step3Label: 'Register with NHS Test and Trace',
+  step4Label: 'Apply to your local authority',
+  step5Label: 'Receive your payment',
+
   // Port to run nodemon on locally
   port: 2000,
 

@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = serviceName %}
+{% set pageHeading = "Applying for a Test and Trace Support Payment" %}
 
 {% block pageTitle %}
   {{pageHeading}} | {{serviceName}}
@@ -19,17 +19,17 @@
         <p>To apply for this payment, you will need to complete the following steps.</p>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h3 class="nhsuk-do-dont-list__label">1. NHS login</h3>
+            <h2 class="nhsuk-do-dont-list__label">1. {{step1Label}}</h2>
             <p>Log in or register for an NHS account so we can check who you are.</p>
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h3 class="nhsuk-do-dont-list__label">2. Enter personal details</h3>
-            <p>You will be asked to enter your name, email, phone number and postcode.</p>
+            <h2 class="nhsuk-do-dont-list__label">2. {{step2Label}}</h2>
+            <p>You will be asked to enter your name and postcode, so that NHS Test and Trace can check for duplicate applications.</p>
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h3 class="nhsuk-do-dont-list__label">3. NHS Test and Trace</h3>
+            <h2 class="nhsuk-do-dont-list__label">3. {{step3Label}}</h2>
             <p>
                 You will receive an email and text message from NHS Test and Trace (this usually takes around 30 minutes).
             </p>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h3 class="nhsuk-do-dont-list__label">4. Your local authority</h3>
+            <h2 class="nhsuk-do-dont-list__label">4. {{step4Label}}</h2>
             <p>You’ll receive a link to your local authority’s website.</p>
             <p>Your local authority will ask you for your NHS Test and Trace ID - the 8-digit number you receive when you have registered with NHS Test and Trace. Your local authority may call this something slightly different, such as an account number or CTAS number.</p>
             <p>They will also ask you for at least:</p>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">
-            <h3 class="nhsuk-do-dont-list__label">5. Your payment</h3>
+            <h2 class="nhsuk-do-dont-list__label">5. {{step5Label}}</h2>
             <p>If your application is successful, you will receive the Test and Trace Support Payment from your local authority.</p>
         </div>
 

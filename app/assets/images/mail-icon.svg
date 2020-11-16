@@ -1,0 +1,21 @@
+<svg id="e855317b-c2c0-4309-8fef-b0496947a302" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.01 136">
+  <defs>
+    <style>
+      .e6df2f20-05cb-48fa-9e89-5086f612d7cd {
+        fill: none;
+        stroke: #005eb8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <g id="eca7d3f7-0691-4ccb-9ab0-95b467287d9f" data-name="Layer 1">
+    <path class="e6df2f20-05cb-48fa-9e89-5086f612d7cd" d="M204,84.82v91a15.8,15.8,0,0,1-15.75,15.75H51.75A15.8,15.8,0,0,1,36,175.77V81.27A15.8,15.8,0,0,1,51.75,65.52H182.5" transform="translate(-31 -60.52)"/>
+    <g>
+      <line class="e6df2f20-05cb-48fa-9e89-5086f612d7cd" x1="5" y1="20.76" x2="86.38" y2="86.38"/>
+      <line class="e6df2f20-05cb-48fa-9e89-5086f612d7cd" x1="86.38" y1="86.38" x2="173" y2="18.3"/>
+    </g>
+    <path class="e6df2f20-05cb-48fa-9e89-5086f612d7cd" d="M175.21,65.53h14.4c7.92,0,14.4,6.25,14.4,13.88V93.29" transform="translate(-31 -60.52)"/>
+  </g>
+</svg>

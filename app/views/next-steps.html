@@ -16,27 +16,39 @@
             {{pageHeading}}
         </h1>
 
-        <p class="nhsuk-lede-text">
-            Your details have now been sent to NHS Test and Trace.
-        </p>
+        {{ list({
+            "title": "Steps completed",
+            "type": "tick",
+            "items": [
+              {
+                "item": "1. You have logged in with NHS login"
+              },
+              {
+                "item": "2. You have entered your personal details"
+              }
+            ]
+        }) }}
 
-        <h2 class="nhsuk-heading-l">
-            You will receive an email and text message
-        </h2>
-
-        <p>
-            NHS Test and Trace should send you an email and text message within the next 30 minutes.
-        </p>
-        <p>
-            This will include a link to continue your application.
-        </p>
-
-        <p>
-            If you cannot find the email, you should check your junk mail or spam folder.
-        </p>
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h2 class="nhsuk-do-dont-list__label">3. You will receive an email and text message</h2>
+            <div class="nhs-sip-text-with-icon nhs-sip-email-icon">
+                <p>Your details have now been sent to NHS Test and Trace.</p>
+                <p>
+                    NHS Test and Trace should send you an email and text message within the next 30 minutes.
+                </p>
+                <p>
+                    If you cannot find the email, you should check your junk mail or spam folder.
+                </p>
+            </div>
+            <div class="nhs-sip-text-with-icon nhs-sip-link-icon">
+                <p>
+                    This will include a link to continue your application.
+                </p>
+            </div>
+        </div>
 
         {{ insetText({
-            "HTML": "<p>If you do not receive an email or text message within 2 hours, you should <a href='?'>contact NHS Test and Trace</a>.</p>"
+            "HTML": "<p>If you do not receive an email or text message within 2 hours, you should <a href='help-support'>check the help and support section</a>.</p>"
           }) }}
 
         <h2 class="nhsuk-heading-l">
