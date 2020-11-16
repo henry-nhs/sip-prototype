@@ -12,7 +12,7 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form action="/next-steps">
+      <form action="/personal-details-check">
 
         <h1 class="nhsuk-heading-xl">
           {{pageHeading}}
@@ -23,7 +23,8 @@
             "text": "First name"
           },
           "id": "first-name",
-          "name": "first-name"
+          "name": "first-name",
+          "value": data["first-name"]
         }) }}
 
         {{ input({
@@ -31,7 +32,8 @@
             "text": "Last name"
           },
           "id": "last-name",
-          "name": "last-name"
+          "name": "last-name",
+          "value": data["last-name"]
         }) }}
 
         
@@ -45,14 +47,15 @@
           },
           "id": "postcode",
           "name": "postcode",
+          "value": data["postcode"],
           "classes": "nhsuk-input--width-10"
         }) }}
 
         <br>
 
         {{ checkboxes({
-          "idPrefix": "agree",
-          "name": "agree",
+          "idPrefix": "agree-18",
+          "name": "agree-18",
           "fieldset": {
               "legend": {
               "text": 'Are you aged 18 or over?',
@@ -63,7 +66,8 @@
           "items": [
               {
               "value": "true",
-              "html": "I am 18 or over"
+              "html": "I am 18 or over",
+              "checked": checked("agree-18", "true")
               }
           ]
           }) }}

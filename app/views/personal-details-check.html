@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Check your personal detail" %}
+
+{% block pageTitle %}
+  {{pageHeading}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/next-steps">
+
+        <h1 class="nhsuk-heading-xl">
+          {{pageHeading}}
+        </h1>
+        
+        {{ summaryList({
+          rows: [
+            {
+              key: {
+                text: "Name"
+              },
+              value: {
+                text: data["first-name"] + " " + data["last-name"]
+              },
+              actions: {
+                items: [
+                  {
+                    href: "personal-details",
+                    text: "Change",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Full home postcode"
+              },
+              value: {
+                text: data["postcode"]
+              },
+              actions: {
+                items: [
+                  {
+                    href: "personal-details",
+                    text: "Change",
+                    visuallyHiddenText: "postcode"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+        
+        
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}
