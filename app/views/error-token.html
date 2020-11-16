@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Invalid link" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+
+        <p>
+          The link that you’ve used is not valid. Make sure you are using the button in the app on your phone.
+        </p>
+
+        <p>
+          You can only apply for a payment once in an isolation period.
+        </p>
+    
+
+    </div>
+</div>
+
+{% endblock %}

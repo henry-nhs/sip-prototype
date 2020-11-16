@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Sorry, something went wrong" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+
+        <p>
+          There has been an error and we’re unable to continue.
+        </p>
+
+        <p>
+          Use the button in the NHS COVID-19 app to try again.
+        </p>
+    
+
+    </div>
+</div>
+
+{% endblock %}
