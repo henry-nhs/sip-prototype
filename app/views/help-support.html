@@ -30,21 +30,6 @@
 
             {{ details({
             "classes": "nhsuk-expander",
-            "text": "I get an invalid link message",
-            "HTML": "
-            <p>This could be because of one of the following reasons:</p>
-            <ul>
-                <li>
-                    You have already applied for this and it is either in process or has been processed now.
-                </li>
-                <li>
-                    You are not applying within the 14-day window from the end date of your isolation.
-                </li>
-            </ul>"
-            }) }}
-
-            {{ details({
-            "classes": "nhsuk-expander",
             "text": "I have tried logging back using my NHS login, but I cannot see where to
             apply",
             "HTML": "
@@ -67,16 +52,23 @@
 
             {{ details({
             "classes": "nhsuk-expander",
-            "text": "My local authority has rejected my application, saying I have already applied",
+            "text": "My local authority has rejected my application",
             "HTML": "
             <p>This could be because you have already applied and it is in process. You can only apply once per self-isolaton period</p>"
             }) }}
 
             {{ details({
                 "classes": "nhsuk-expander",
+                "text": "I don’t live in England, where can I get support?",
+                "HTML": '
+                <p>This payment is only available in England. Find out what financial support you can get if you’re in <a href="https://www.mygov.scot/coronavirus-covid-19">Scotland</a>, <a href="https://gov.wales/work-skills-financial-support">Wales</a>, or <a href="https://www.nidirect.gov.uk/information-and-services/coronavirus-covid-19/financial-help-and-practical-support">Northern Ireland</a>.</p>'
+                }) }}
+
+            {{ details({
+                "classes": "nhsuk-expander",
                 "text": "My problem isn’t listed here",
                 "HTML": "
-                <p>If you are experiencing a different issue...</p>"
+                <p>If you are experiencing an issue that isn’t listed here, contact 0800 123456</p>"
                 }) }}
         
         </div>
