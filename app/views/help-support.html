@@ -16,8 +16,70 @@
             {{pageHeading}}
         </h1>
 
-        <p>Placeholder for help and support pages</p>
-    
+        <p>
+            Before contacting the NHS or your local authority. Check to see if the problem you’re having is listed here.
+        </p>
+        <div class="nhs-sip-expanders">
+
+            {{ details({
+            "classes": "nhsuk-expander",
+            "text": "Clicking the button in the app asks me to try again",
+            "HTML": "
+            <p>The service may be temporarily unavailable, and we are trying to fix it as soon as possible. Please try again by clicking on the button in the app again later.</p>"
+            }) }}
+
+            {{ details({
+            "classes": "nhsuk-expander",
+            "text": "I get an invalid link message",
+            "HTML": "
+            <p>This could be because of one of the following reasons:</p>
+            <ul>
+                <li>
+                    You have already applied for this and it is either in process or has been processed now.
+                </li>
+                <li>
+                    You are not applying within the 14-day window from the end date of your isolation.
+                </li>
+            </ul>"
+            }) }}
+
+            {{ details({
+            "classes": "nhsuk-expander",
+            "text": "I have tried logging back using my NHS login, but I cannot see where to
+            apply",
+            "HTML": "
+            <p>To apply for this support you will have to start with the button in the app. You cannot use NHS login directly to apply for this support.</p>"
+            }) }}
+
+            {{ details({
+            "classes": "nhsuk-expander",
+            "text": "I have not received an invite email or text message",
+            "HTML": "
+            <p>It could take some time to get the email and text message. If you don’t receive it after 30 minutes, then you can try again by clicking on the button in the app.</p>"
+            }) }}
+
+            {{ details({
+            "classes": "nhsuk-expander",
+            "text": "My local authority have said my NHS Test & Trace account ID is not valid",
+            "HTML": "
+            <p>Ensure you have completed the online journey by adding additional information on NHS Test & Trace. You should then get an email with a confirmation of completion of this and a link to find your local authority.</p>"
+            }) }}
+
+            {{ details({
+            "classes": "nhsuk-expander",
+            "text": "My local authority has rejected my application, saying I have already applied",
+            "HTML": "
+            <p>This could be because you have already applied and it is in process. You can only apply once per self-isolaton period</p>"
+            }) }}
+
+            {{ details({
+                "classes": "nhsuk-expander",
+                "text": "My problem isn’t listed here",
+                "HTML": "
+                <p>If you are experiencing a different issue...</p>"
+                }) }}
+        
+        </div>
 
     </div>
 </div>

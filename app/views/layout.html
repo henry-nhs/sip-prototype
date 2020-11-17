@@ -47,18 +47,19 @@
 <!-- Footer goes inside the footer block -->
 <!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
-  {{ footer({
-    "links": [
-      {
-        "URL": "/",
-        "label": "Home"
-      },
-      {
-        "URL": "help-support",
-        "label": "Help and support with this service"
-      }
-    ]
-  })}}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/">Home</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="help-support" target="_blank">Help and support with this service</a><br>(opens in a new tab)</li>
+      </ul>
+      
+      <p class="nhsuk-footer__copyright">© Crown copyright</p>
+    </div>
+  </div>
+</footer>
 {% endblock %}
 
 {% block bodyEnd %}

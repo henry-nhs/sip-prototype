@@ -50,3 +50,9 @@
 .nhs-sip-link-icon {
     background-image: url(../images/link-icon.svg);
 }
+
+.nhs-sip-expanders {
+    .nhsuk-expander summary span {
+        text-decoration: none;
+    }
+}
