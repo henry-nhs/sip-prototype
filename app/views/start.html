@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = serviceName %}
+{% set pageHeading = "Do you live in England or Wales?" %}
 
 {% block pageTitle %}
   {{pageHeading}} | {{serviceName}}
@@ -12,47 +12,36 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-        <h1 class="nhsuk-heading-xl">
-            {{pageHeading}}
-        </h1>
+      <form action="/eligible-0-backend">
+        {{ radios({
+          "idPrefix": "elig-england",
+          "name": "elig-england",
+          "fieldset": {
+            "legend": {
+              "text": pageHeading,
+              "classes": "nhsuk-fieldset__legend--l",
+              "isPageHeading": true
+            }
+          },
+          "items": [
+            {
+              "value": "england",
+              "text": "England"
+            },
+            {
+              "value": "wales",
+              "text": "Wales / Cymru"
+            }
+          ]
+        }) }}
 
-        <p>
-            You can use this service if the NHS COVID-19 app has detected that you have been in contact with a person who has coronavirus. This means you are advised to self-isolate.
-        </p>
-
-        <p>
-            If you are on a low income, are unable to work from home and will lose income as a result of self-isolating, you may be entitled to a payment of £500 from your local authority under the Test and Trace Support Payment scheme.
-        </p>
-
-        <p>
-            You will need to answer some questions in the next section to check whether you could be eligible.
-        </p>
-
-        <h2 class="nhsuk-heading-l">
-            Before you start
-        </h2>
-
-        <p>
-            You cannot claim this payment more than once within a self-isolation period. If you are asked to self-isolate for overlapping periods of time, this counts as one self-isolation period.
-        </p>
-        <p>
-            As part of the application process, you will register with NHS Test and Trace. When you reach this step, you will be legally required to self-isolate. If you do not comply, you may face a penalty of at least £1,000.
-        </p>
-        <p>
-            The app cannot be used to track you, and the personal details you provide to this service will not be held anywhere in the app.
-        </p>
-
-        {{ insetText({
-            "HTML": "<p>As part of the application process, you will register with NHS Test and Trace.</p><p>To claim this payment, you need to reach this step in your application within 72 hours of receiving the alert from the app (by 8pm on 21 November 2020).</p>"
-          }) }}
-
-        <form action="/eligible-0">
-            {{ button({
-            "text": "Start now"
-            }) }}
-        </form>
-
+        {{ button({
+          "text": "Continue"
+        }) }}
+      </form>
+        
+        
     </div>
-</div>
+  </div>
 
 {% endblock %}

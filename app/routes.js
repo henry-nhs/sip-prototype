@@ -7,10 +7,10 @@ const router = express.Router();
 router.get('/eligible-0-backend', function (req, res) {
     switch (req.session.data['elig-england']) {
         case "wales":
-            res.redirect('wales-info');
+            res.redirect('https://gov.wales/work-skills-financial-support');
             break;
         default:
-            res.redirect('eligible-1');
+            res.redirect('england-start');
             break;
     }
 });
