@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Support if you live in Wales" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+        
+        <p>If you live in Wales, you can <a href="https://gov.wales/work-skills-financial-support">get support on gov.wales</a>.</p>
+    </div>
+</div>
+
+{% endblock %}

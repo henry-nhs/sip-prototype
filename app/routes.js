@@ -4,6 +4,17 @@ const router = express.Router();
 
 // Add your routes here - above the module.exports line
 
+router.get('/eligible-0-backend', function (req, res) {
+    switch (req.session.data['elig-england']) {
+        case "wales":
+            res.redirect('wales-info');
+            break;
+        default:
+            res.redirect('eligible-1');
+            break;
+    }
+});
+
 router.get('/eligible-1-backend', function (req, res) {
     switch (req.session.data['elig-employed']) {
         case "unemployed":
