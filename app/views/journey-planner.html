@@ -35,15 +35,25 @@
 
         <div class="nhsuk-do-dont-list sip-info-card">
             <h2 class="nhsuk-do-dont-list__label" id="step-3">3. {{step3Label}}</h2>
-            <p>
-                You will receive an email and text message from NHS Test and Trace.
-            </p>
-            <p>
-                You will need to enter some personal details to register for NHS Test and Trace if you haven’t already done this.
-            </p>
-            <p>
-                When you’ve registered, you’ll receive an NHS Test and Trace Account ID (sometimes known as an account number or CTAS number). At this point, you will be legally required to self-isolate and may face a penalty of at least £1,000 if you do not comply.
-            </p>
+            <div class="nhs-sip-text-with-icon nhs-sip-email-icon">
+                <p>
+                    You will receive an email and text message from NHS Test and Trace.
+                </p>
+            </div>
+            <div class="nhs-sip-text-with-icon nhs-sip-form-icon">
+                <p>
+                    You will need to enter some personal details to register for NHS Test and Trace if you haven’t already done this.
+                </p>
+            </div>
+            <div class="nhs-sip-text-with-icon nhs-sip-info-icon">
+                <p>
+                    When you’ve registered, you’ll receive an NHS Test and Trace Account ID (sometimes known as an account number or CTAS number).
+                </p>
+            </div>
+            {{ insetText({
+                "HTML": "<p>At this point, you will be legally required to self-isolate and may face a penalty of at least £1,000 if you do not comply.</p>"
+              }) }}
+            
         </div>
 
         <div class="nhsuk-do-dont-list sip-info-card">

@@ -20,6 +20,10 @@
     }
 }
 
+.nhsuk-icon__tick {
+    stroke: $nhsuk-link-color;
+}
+
 .button--nhs-login,
 .button--nhs-login:hover,
 .button--nhs-login:active {
@@ -29,6 +33,7 @@
     background-color: $nhsuk-link-color;
     box-shadow: 0 4px 0 darken($nhsuk-link-color, 15%);
     padding-left: 80px;
+    text-align: left;
     &:hover,
     &:active {
         background-color: darken($nhsuk-link-color, 5%);
@@ -49,6 +54,14 @@
 
 .nhs-sip-link-icon {
     background-image: url(../images/link-icon.svg);
+}
+
+.nhs-sip-form-icon {
+    background-image: url(../images/form-icon.svg);
+}
+
+.nhs-sip-info-icon {
+    background-image: url(../images/info-icon.svg);
 }
 
 .nhs-sip-expanders {
