@@ -16,35 +16,10 @@
             {{pageHeading}}
         </h1>
 
-        <p>To apply for this payment, you will need to complete the following steps. Read these carefully before you continue.</p>
-
-        {{ contentsList({
-            items: [
-              {
-                href: "#step-1",
-                text: "1. " + step1Label,
-                current: "true"
-              },
-              {
-                href: "#step-2",
-                text: "2. " + step2Label
-              },
-              {
-                href: "#step-3",
-                text: "3. " + step3Label
-              }
-              ,
-              {
-                href: "#step-4",
-                text: "4. " + step4Label
-              }
-              ,
-              {
-                href: "#step-5",
-                text: "5. " + step5Label
-              }
-            ]
+        {{ insetText({
+            "HTML": "<p>To apply for this payment, you will need to complete the following steps.</p><p>Read these carefully before you continue.</p>"
           }) }}
+
 
         <div class="nhsuk-do-dont-list sip-info-card">
             <h2 class="nhsuk-do-dont-list__label" id="step-1">1. {{step1Label}}</h2>
