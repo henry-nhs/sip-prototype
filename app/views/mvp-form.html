@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Enter your personal details" %}
+{% set pageHeading = "Enter your details to send to NHS Test and Trace" %}
 
 {% block pageTitle %}
   {{pageHeading}}
@@ -12,7 +12,7 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form action="/personal-details-check">
+      <form action="/mvp-form-check">
 
         <h1 class="nhsuk-heading-xl">
           {{pageHeading}}
@@ -40,7 +40,24 @@
           "value": data["last-name"]
         }) }}
 
-        
+        {{ input({
+          "label": {
+            "text": "Email address"
+          },
+          "id": "email-address",
+          "name": "email-address",
+          "value": data["email-address"]
+        }) }}
+
+        {{ input({
+          "label": {
+            "text": "UK mobile number"
+          },
+          "id": "phone-number",
+          "name": "phone-number",
+          "type": "tel",
+          "value": data["phone-number"]
+        }) }}
 
         {{ input({
           "label": {
@@ -54,8 +71,6 @@
           "value": data["postcode"],
           "classes": "nhsuk-input--width-10"
         }) }}
-
-        <br>
         
 
         {{ button({
