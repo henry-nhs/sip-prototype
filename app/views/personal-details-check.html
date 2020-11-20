@@ -60,6 +60,30 @@
             }
           ]
         }) }}
+
+        {{ insetText({
+          "HTML": "<p>When you continue, you will be legally required to self-isolate. Read more information about <a target='_blank' href='https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-and-treatment/when-to-self-isolate-and-what-to-do/'>what it means to self-isolate</a>.</p>"
+        }) }}
+
+
+        {{ checkboxes({
+          "idPrefix": "agree-isolate",
+          "name": "agree-isolate",
+          "fieldset": {
+              "legend": {
+              "text": 'Do you understand you will now be legally required to self-isolate?',
+              "isPageHeading": false,
+              "classes": 'nhsuk-u-visually-hidden'
+              }
+          },
+          "items": [
+              {
+              "value": "true",
+              "html": "I understand I will now be legally required to self-isolate",
+              "checked": checked("agree-isolate", "true")
+              }
+          ]
+          }) }}
         
         
 

@@ -1,8 +1,9 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Do you live in England or Wales?" %}
-{% set welshFooterText = "Cymraeg" %}
-{% set welshFooterLink = "start-welsh" %}
+{% set pageHeading = "Ydych chi'n byw yng Nghymru neu Loegr?" %}
+{% set welshFooterText = "English" %}
+{% set welshFooterLink = "start" %}
+{% set falseServiceName = "Gwnewch gais am Daliad Cymorth Prawf a Olrhain" %}
 
 {% block pageTitle %}
   {{pageHeading}} | {{serviceName}}
@@ -28,17 +29,17 @@
           "items": [
             {
               "value": "england",
-              "text": "England"
+              "text": "Lloegr"
             },
             {
               "value": "wales",
-              "text": "Wales"
+              "text": "Cymru"
             }
           ]
         }) }}
 
         {{ button({
-          "text": "Continue"
+          "text": "Parhewch"
         }) }}
       </form>
         
