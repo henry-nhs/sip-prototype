@@ -21,16 +21,31 @@
           "type": "tick",
           "items": [
             {
-              "item": "Confirmed who you are with NHS login"
+              "item": "You have confirmed who you are with NHS login"
             },
             {
-              "item": "You have entered your personal details"
+              "item": "You have submitted your personal details to NHS Test and Trace"
             }
           ]
       }) }}
 
       {{ insetText({
-        "HTML": "<p>You haven’t finished your application yet.</p>"
+        "HTML": "
+        <p>
+          You haven’t applied for the Test and Trace Support Payment yet. To do this, you will need to:
+        </p>
+        <ul class='nhsuk-list nhsuk-list--bullet'>
+          <li>
+            register with NHS Test and Trace 
+          </li>
+          <li>
+            apply to your local authority
+          </li>
+        </ul>
+        <p>
+          You can find out more about these steps on the following page.
+        </p>"
+        
       }) }}
         
         <form action="/next-steps">

@@ -20,7 +20,7 @@
 
         {{ insetText({
           "HTML": "<p>The personal details you provide in this service will not be held anywhere in the app.</p>"
-      }) }}
+        }) }}
         
         {{ summaryList({
           rows: [
@@ -61,11 +61,42 @@
           ]
         }) }}
 
-        {{ insetText({
-          "HTML": "<p>When you continue, you will be legally required to self-isolate. This means .... [extra content here]</p>"
-        }) }}
+        <div class="nhsuk-do-dont-list sip-info-card">
+          <h2 class="nhsuk-do-dont-list__label">Important information</h2>
+          <p>
+            When you continue, you will be legally required to self-isolate. This means you must:
+          </p>
 
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>
+              not leave your home for any reason – if you need food or medicine, order it online or by phone, or ask friends and family to drop it off at your home
+            </li>
+            <li>
+              not have visitors in your home, including friends and family – except for essential care
+            </li>
+            <li>
+              try to avoid contact with anyone you live with as much as possible
+            </li>
+          </ul>
 
+          <p>
+            If you do not have symptoms:
+          </p>
+
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>
+              people you live with do not need to self-isolate
+            </li>
+            <li>
+              people in your support bubble do not need to self-isolate
+            </li>
+          </ul>
+
+          <p>If you do not comply, you may face a penalty of at least £1,000.</p>
+          
+          <p>The app still cannot be used to track you.</p>
+        </div>
+    
         {{ checkboxes({
           "idPrefix": "agree-isolate",
           "name": "agree-isolate",
@@ -85,6 +116,7 @@
           ]
           }) }}
         
+          <br>
         
 
         {{ button({
