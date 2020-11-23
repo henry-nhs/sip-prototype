@@ -1,0 +1,147 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = serviceName %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+
+        <p>
+            You can use this service if the NHS COVID-19 app has detected that you have been in contact with a person who has coronavirus. This means you are advised to self-isolate.
+        </p>
+
+        <p>
+            If you are on a low income, are unable to work from home and will lose income as a result of self-isolating, you may be entitled to a payment of £500 from your local authority under the Test and Trace Support Payment scheme.
+        </p>
+
+        <h2 class="nhsuk-heading-l">
+            Before you start
+        </h2>
+
+        <p>
+            You cannot claim this payment more than once within a self-isolation period. If you are asked to self-isolate for overlapping periods of time, this counts as one self-isolation period.
+        </p>
+        <p>
+            As part of the application process, you will register with NHS Test and Trace. When you do this, you will be legally required to self-isolate. If you do not comply, you may face a penalty of at least £1,000.
+        </p>
+        <p>
+            The app cannot be used to track you, and the personal details you provide to this service will not be held anywhere in the app.
+        </p>
+
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label" id="step-1">Check your eligibility</h3>
+            <p>To be eligible for a Test and Trace Support Payment, you must:</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>be employed or self-employed and unable to work from home</li>
+                <li>have lost income as a result of having to stay at home</li>
+                <li>receive at least one of the qualifying benefits below</li>
+            </ul>
+            <p>Qualifying benefits, include:</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>
+                Universal Credit
+                </li>
+                <li>
+                Working Tax Credit
+                </li>
+                <li>
+                Income-based Employment and Support Allowance
+                </li>
+                <li>
+                Income-based Jobseeker’s Allowance
+                </li>
+                <li>
+                Income Support
+                </li>
+                <li>
+                Housing Benefit
+                </li>
+                <li>
+                Pension Credit
+                </li>
+            </ul>
+            <p>If you don’t currently receive a qualifying benefit, you may be eligible for a discretionary benefit from your local authority.</p>
+        </div>
+
+        <h2 class="nhsuk-heading-l">
+            The rest of the application
+        </h2>
+
+        {{ insetText({
+        "HTML": "<p>To apply for this payment, you will need to complete the following steps.</p><p>Read these carefully before you continue.</p>"
+        }) }}
+
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label" id="step-2">1. {{step2Label}}</h3>
+            <p>You will be asked to enter your name, email and phone number so that NHS Test and Trace can carry out some checks.</p>
+        </div>
+
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label" id="step-3">2. {{step3Label}}</h3>
+            <div class="nhs-sip-text-with-icon nhs-sip-email-icon">
+                <p>
+                    You will receive an email and text message from NHS Test and Trace.
+                </p>
+            </div>
+            <div class="nhs-sip-text-with-icon nhs-sip-form-icon">
+                <p>
+                    You will need to enter some personal details to register for NHS Test and Trace if you haven’t already done this.
+                </p>
+            </div>
+            <div class="nhs-sip-text-with-icon nhs-sip-info-icon">
+                <p>
+                    When you’ve registered, you’ll receive an NHS Test and Trace Account ID (sometimes known as an account number or CTAS number).
+                </p>
+            </div>
+            {{ insetText({
+                "HTML": "<p>At this point, you will be legally required to self-isolate and may face a penalty of at least £1,000 if you do not comply.</p>"
+              }) }}
+            
+        </div>
+
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label" id="step-4">3. {{step4Label}}</h3>
+            <p>You’ll need to visit your local authority’s website to apply for the payment.</p>
+            <p>Your local authority will ask you for your NHS Test and Trace Account ID - the 8-digit number you receive when you register with NHS Test and Trace. Your local authority may call this something different, such as an account number or CTAS number.</p>
+            <p>They will also ask you for at least:</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>
+                    proof of your identity
+                </li>
+                <li>
+                    proof of benefits you’ve received
+                </li>
+                <li>
+                    your employment details (including National Insurance number)
+                </li>
+                <li>
+                    your bank account details
+                </li>
+            </ul>
+        </div>
+
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h3 class="nhsuk-do-dont-list__label" id="step-5">4. {{step5Label}}</h3>
+            <p>If your application is successful, you will receive the Test and Trace Support Payment from your local authority.</p>
+        </div>
+
+        <form action="/mvp-form">
+            {{ button({
+            "text": "Start now"
+            }) }}
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

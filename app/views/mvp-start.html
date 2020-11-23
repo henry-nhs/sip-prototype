@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Do you live in England or Wales?" %}
+{% set welshFooterText = "Cymraeg" %}
+{% set welshFooterLink = "mvp-start-welsh" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form action="/mvp-eligible-0-backend">
+        {{ radios({
+          "idPrefix": "elig-england",
+          "name": "elig-england",
+          "fieldset": {
+            "legend": {
+              "text": pageHeading,
+              "classes": "nhsuk-fieldset__legend--l",
+              "isPageHeading": true
+            }
+          },
+          "items": [
+            {
+              "value": "england",
+              "text": "England"
+            },
+            {
+              "value": "wales",
+              "text": "Wales"
+            }
+          ]
+        }) }}
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+      </form>
+        
+        
+    </div>
+  </div>
+
+{% endblock %}

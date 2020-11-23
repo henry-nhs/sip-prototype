@@ -15,6 +15,17 @@ router.get('/eligible-0-backend', function (req, res) {
     }
 });
 
+router.get('/mvp-eligible-0-backend', function (req, res) {
+    switch (req.session.data['elig-england']) {
+        case "wales":
+            res.redirect('https://gov.wales/work-skills-financial-support');
+            break;
+        default:
+            res.redirect('mvp-england-start');
+            break;
+    }
+});
+
 router.get('/eligible-1-backend', function (req, res) {
     switch (req.session.data['elig-employed']) {
         case "unemployed":
