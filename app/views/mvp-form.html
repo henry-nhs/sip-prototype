@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Enter your details to send to NHS Test and Trace" %}
+{% set pageHeading = "Enter your personal details" %}
 
 {% block pageTitle %}
   {{pageHeading}}
@@ -12,14 +12,14 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form action="/next-steps">
+      <form action="/mvp-next-steps">
 
         <h1 class="nhsuk-heading-xl">
           {{pageHeading}}
         </h1>
 
         {{ insetText({
-          "HTML": "<p>The personal details you provide in this service will not be held anywhere in the app.</p>"
+          "HTML": "<p>These details will be sent to NHS Test and Trace so they can carry out some checks.</p><p>None of your personal details will be given to the app.</p>"
       }) }}
         
         {{ input({
@@ -121,7 +121,7 @@
             "name": "agree-isolate",
             "fieldset": {
                 "legend": {
-                "text": 'Do you understand you will now be legally required to self-isolate?',
+                "text": 'Do you understand you will be legally required to self-isolate?',
                 "isPageHeading": false,
                 "classes": 'nhsuk-u-visually-hidden'
                 }
@@ -129,7 +129,7 @@
             "items": [
                 {
                 "value": "true",
-                "html": "I understand I will now be legally required to self-isolate",
+                "html": "I understand I will be legally required to self-isolate",
                 "checked": checked("agree-isolate", "true")
                 }
             ]

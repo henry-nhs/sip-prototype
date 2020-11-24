@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "What happens next" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+
+        <p>
+          You have not applied for the Test and Trace Support Payment yet. To do this, you will need to complete the following steps.
+        </p>
+
+        <div class="nhsuk-do-dont-list sip-info-card">
+            <h2 class="nhsuk-do-dont-list__label">{{step3Label}}</h2>
+            <div class="nhs-sip-text-with-icon nhs-sip-email-icon">
+                <p>
+                  Your details have been submitted to NHS Test and Trace. They will send you an email and text message in the next 30 minutes.
+                </p>
+                <p>
+                  If you cannot find the email, you should check your junk mail or spam folder.
+                </p>
+            </div>
+            <p>
+              You will need to:
+            </p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>
+                follow the link to answer some questions and complete your registration
+              </li>
+              <li>
+                take note of your NHS Test and Trace Account ID, which you will need for the next step
+              </li>
+            </ul> 
+            {{ insetText({
+                "HTML": "<p>If you do not receive an email or text message within 2 hours, you should <a href='help-support'>search for help</a>.</p>"
+              }) }}
+        </div>
+
+        <div class="nhsuk-do-dont-list sip-info-card">
+          <h2 class="nhsuk-do-dont-list__label">{{step4Label}}</h2>
+          <p>
+            You will need to visit your local authority’s website to apply for the payment. 
+          </p>
+          <p>
+            You will need to enter your NHS Test and Trace Account ID - the 8-digit number you received when you registered with NHS Test and Trace. Your local authority may call this something different, such as an account number or CTAS number.
+          </p>
+
+          <p>
+            They will also ask you for at least:
+          </p>
+
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>
+              proof of your identity
+            </li>
+            <li>
+              proof of benefits you’ve received
+            </li>
+            <li>
+              your employment details (including National Insurance number)
+            </li>
+            <li>
+              your bank account details
+            </li>
+          </ul>
+        </div>
+
+        
+
+        <h2 class="nhsuk-heading-l">
+            Continue to self-isolate
+        </h2>
+
+        <p>You must not leave your home until the end of your self-isolation period.</p>
+
+        <p>NHS Test and Trace may contact you while you’re self-isolating to check how you’re coping.</p>
+
+        <p>You do not need to take a test unless you have coronavirus symptoms. You can <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms/">check what the coronavirus symptoms are</a>.</p>
+
+        {{ insetText({
+            "HTML": "<p>You can close this page and continue when you receive your link from NHS Test and Trace.</p>"
+          }) }}
+        
+          
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

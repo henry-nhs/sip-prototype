@@ -21,7 +21,23 @@
         </p>
 
         <p>
-            If you are on a low income, are unable to work from home and will lose income as a result of self-isolating, you may be entitled to a payment of £500 from your local authority under the Test and Trace Support Payment scheme.
+            You may be entitled to a payment of £500 from your local authority under the Test and Trace Support Payment scheme if:
+        </p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>
+            you’re employed or self-employed
+          </li>
+          <li>
+            you’re unable to work from home and will lose income as a result of self-isolating
+          </li>
+          <li>
+            you’re on a low income
+          </li>
+        </ul>
+
+        <p>
+          Your local authority will tell you when you apply if you’re counted as being on a low income.
         </p>
 
         <h2 class="nhsuk-heading-l">
@@ -29,74 +45,21 @@
         </h2>
 
         <p>
-            You cannot claim this payment more than once within a self-isolation period. If you are asked to self-isolate for overlapping periods of time, this counts as one self-isolation period.
+          You cannot claim this payment more than once within a self-isolation period. You can claim it multiple times for separate self-isolation periods, as long as they do not overlap with each other.
         </p>
         <p>
-            As part of the application process, you will register with NHS Test and Trace. When you do this, you will be legally required to self-isolate. If you do not comply, you may face a penalty of at least £1,000.
+          As part of the application process, you will register with NHS Test and Trace.  To claim this payment, you need to register before your self-isolation period finishes.
         </p>
         <p>
-            The app cannot be used to track you, and the personal details you provide to this service will not be held anywhere in the app.
+          When you register with NHS Test and Trace, you will be legally required to self-isolate. If you do not comply, you may face a penalty of at least £1,000.
         </p>
 
-        <div class="nhsuk-do-dont-list sip-info-card">
-            <h3 class="nhsuk-do-dont-list__label" id="step-1">Check your eligibility</h3>
-            <p>To be eligible for a Test and Trace Support Payment, you must:</p>
-            <ul class="nhsuk-list nhsuk-list--bullet">
-                <li>be employed or self-employed and unable to work from home</li>
-                <li>have lost income as a result of having to stay at home</li>
-                <li>receive at least one of the qualifying benefits below</li>
-            </ul>
-            <p>Qualifying benefits, include:</p>
-            <ul class="nhsuk-list nhsuk-list--bullet">
-                <li>
-                Universal Credit
-                </li>
-                <li>
-                Working Tax Credit
-                </li>
-                <li>
-                Income-based Employment and Support Allowance
-                </li>
-                <li>
-                Income-based Jobseeker’s Allowance
-                </li>
-                <li>
-                Income Support
-                </li>
-                <li>
-                Housing Benefit
-                </li>
-                <li>
-                Pension Credit
-                </li>
-            </ul>
-            <p>If you don’t currently receive a qualifying benefit, you may be eligible for a discretionary benefit from your local authority.</p>
-        </div>
+        <p>
+          If you have technical problems while you are using this service, select the ‘Financial support’ button in the app and find the link for <a href="help-support">Help to apply for the Test and Trace Support Payment</a>.
+        </p>
 
         <form action="/mvp-form">
-            {{ radios({
-                "idPrefix": "elig-confirm",
-                "name": "elig-confirm",
-                "fieldset": {
-                  "legend": {
-                    "text": "Do you think you are eligible to apply?",
-                    "classes": "nhsuk-fieldset__legend--m",
-                    "isPageHeading": false
-                  }
-                },
-                "items": [
-                  {
-                    "value": "yes",
-                    "text": "Yes"
-                  },
-                  {
-                    "value": "no",
-                    "text": "No"
-                  }
-                ]
-              }) }}
-
-              <br>
+            
               
             {{ button({
             "text": "Start now"
