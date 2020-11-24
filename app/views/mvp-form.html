@@ -59,31 +59,10 @@
           "value": data["phone-number"]
         }) }}
 
-        <br>
-
-        {{ checkboxes({
-          "idPrefix": "agree-18",
-          "name": "agree-18",
-          "fieldset": {
-              "legend": {
-              "text": 'Are you 18 or over?',
-              "isPageHeading": false,
-              "classes": 'nhsuk-u-visually-hidden'
-              }
-          },
-          "items": [
-              {
-              "value": "true",
-              "html": "I am 18 or over",
-              "checked": checked("agree-18", "true")
-              }
-          ]
-          }) }}
-
           <div class="nhsuk-do-dont-list sip-info-card">
             <h2 class="nhsuk-do-dont-list__label">Important information</h2>
             <p>
-              When you continue, you will be legally required to self-isolate. This means you must:
+              When you submit your details to NHS Test and Trace, you will be legally required to self-isolate. This means you must:
             </p>
   
             <ul class="nhsuk-list nhsuk-list--bullet">

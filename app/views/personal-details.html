@@ -42,28 +42,6 @@
 
         <br>
 
-        {{ checkboxes({
-          "idPrefix": "agree-18",
-          "name": "agree-18",
-          "fieldset": {
-              "legend": {
-              "text": 'Are you 18 or over?',
-              "isPageHeading": false,
-              "classes": 'nhsuk-u-visually-hidden'
-              }
-          },
-          "items": [
-              {
-              "value": "true",
-              "html": "I am 18 or over",
-              "checked": checked("agree-18", "true")
-              }
-          ]
-          }) }}
-
-        <br>
-        
-
         {{ button({
           "text": "Continue"
         }) }}

@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Check your personal details" %}
+{% set pageHeading = "Check your answers" %}
 
 {% block pageTitle %}
   {{pageHeading}}
@@ -17,10 +17,6 @@
         <h1 class="nhsuk-heading-xl">
           {{pageHeading}}
         </h1>
-
-        {{ insetText({
-          "HTML": "<p>The personal details you provide in this service will not be held anywhere in the app.</p>"
-        }) }}
         
         {{ summaryList({
           rows: [
@@ -64,7 +60,7 @@
         <div class="nhsuk-do-dont-list sip-info-card">
           <h2 class="nhsuk-do-dont-list__label">Important information</h2>
           <p>
-            When you continue, you will be legally required to self-isolate. This means you must:
+            When you submit your details to NHS Test and Trace, you will be legally required to self-isolate. This means you must:
           </p>
 
           <ul class="nhsuk-list nhsuk-list--bullet">

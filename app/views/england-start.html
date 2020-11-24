@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = serviceName %}
+{% set pageHeading = "Check if you can apply for a Test and Trace Support Payment" %}
 
 {% block pageTitle %}
   {{pageHeading}} | {{serviceName}}
@@ -21,8 +21,20 @@
         </p>
 
         <p>
-            If you are on a low income, are unable to work from home and will lose income as a result of self-isolating, you may be entitled to a payment of £500 from your local authority under the Test and Trace Support Payment scheme.
+            You may be entitled to a payment of £500 from your local authority under the Test and Trace Support Payment scheme if:
         </p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>
+            you’re employed or self-employed
+          </li>
+          <li>
+            you’re unable to work from home and will lose income as a result of self-isolating
+          </li>
+          <li>
+            you’re on a low income
+          </li>
+        </ul>
 
         <p>
             You will need to answer some questions in the next section to check whether you could be eligible.
@@ -35,17 +47,16 @@
         <p>
             You cannot claim this payment more than once within a self-isolation period. You can claim it multiple times for separate self-isolation periods, as long as they do not overlap with each other.
         </p>
-        <p>
-            As part of the application process, you will register with NHS Test and Trace.  To claim this payment, you need to register before your self-isolation period finishes.
-        </p>
-        <p>
-            When you register with NHS Test and Trace, you will be legally required to self-isolate. If you do not comply, you may face a penalty of at least £1,000.
-        </p>
+        
         <p>
           If you have technical problems while you are using this service, select the ‘Financial support’ button in the app and find the link for <a href="help-support">Help to apply for the Test and Trace Support Payment</a>.
         </p>
 
-        <br>
+        {{ insetText({
+          "HTML": "<p>
+            As part of the application process, you will register with NHS Test and Trace. </p><p>To claim this payment, you need to register before your self-isolation period finishes.
+            </p>"
+        }) }}
 
         <form action="/eligible-1">
             {{ button({
