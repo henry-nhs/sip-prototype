@@ -59,11 +59,35 @@
         }) }}
 
         <form action="/mvp-form">
+
+          <div class="nhsuk-do-dont-list sip-info-card">
+              <h2 class="nhsuk-do-dont-list__label">Important information</h2>
+              <p>If you are caught committing fraud to claim this payment, you will face prosecution and the money will be recovered from you.</p>
+              <p>Examples of fraud could include deliberately giving false information, failing to self-isolate or claiming the payment more than once for the same self-isolation period.</p>
+          </div>
+          
+          {{ checkboxes({
+          "idPrefix": "agree",
+          "name": "agree",
+          "fieldset": {
+              "legend": {
+              "text": 'Do you understand and accept this information?',
+              "isPageHeading": false,
+              "classes": 'nhsuk-u-visually-hidden'
+              }
+          },
+          "items": [
+              {
+              "value": "true",
+              "html": "I understand and accept this information"
+              }
+          ]
+          }) }}
             
               
-            {{ button({
-            "text": "Start now"
-            }) }}
+          {{ button({
+          "text": "Start now"
+          }) }}
         </form>
 
     </div>
