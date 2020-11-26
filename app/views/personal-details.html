@@ -40,7 +40,29 @@
           "value": data["last-name"]
         }) }}
 
-        <br>
+        {{ radios({
+          "idPrefix": "18-over",
+          "name": "18-over",
+          "fieldset": {
+            "legend": {
+              "text": "Are you 18 or over?",
+              "classes": "nhsuk-fieldset__legend--m",
+              "isPageHeading": false
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              checked: checked('18-over', 'yes')
+            },
+            {
+              "value": "no",
+              "text": "No",
+              checked: checked('18-over', 'no')
+            }
+          ]
+        }) }}
 
         {{ button({
           "text": "Continue"
