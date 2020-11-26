@@ -59,30 +59,6 @@
           "value": data["phone-number"]
         }) }}
 
-        {{ radios({
-          "idPrefix": "18-over",
-          "name": "18-over",
-          "fieldset": {
-            "legend": {
-              "text": "Are you 18 or over?",
-              "classes": "nhsuk-fieldset__legend--m",
-              "isPageHeading": false
-            }
-          },
-          "items": [
-            {
-              "value": "yes",
-              "text": "Yes",
-              checked: checked('18-over', 'yes')
-            },
-            {
-              "value": "no",
-              "text": "No",
-              checked: checked('18-over', 'no')
-            }
-          ]
-        }) }}
-
           <div class="nhsuk-do-dont-list sip-info-card">
             <h2 class="nhsuk-do-dont-list__label">Important information</h2>
             <p>
