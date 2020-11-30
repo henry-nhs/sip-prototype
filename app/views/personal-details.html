@@ -40,6 +40,43 @@
           "value": data["last-name"]
         }) }}
 
+        <p>
+        	Email address from NHS login <br> name@email.com
+        </p>
+
+        <p>
+          UK mobile number from NHS login <br> 07890 123456
+        </p>
+
+        {{ radios({
+          "idPrefix": "18-over",
+          "name": "18-over",
+          "fieldset": {
+            "legend": {
+              "text": "Are you 18 or over?",
+              "classes": "nhsuk-fieldset__legend--m",
+              "isPageHeading": false
+            }
+          },
+          "hint": {
+            "text": "This does not affect your application. It is used by NHS Test and Trace to help them provide a suitable service to you."
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              "checked": checked('18-over', 'yes')
+            },
+            {
+              "value": "no",
+              "text": "No",
+              "checked": checked('18-over', 'no')
+            }
+          ]
+        }) }}
+
+        <br>  
+
         {{ button({
           "text": "Continue"
         }) }}
