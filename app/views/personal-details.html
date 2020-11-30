@@ -40,12 +40,20 @@
           "value": data["last-name"]
         }) }}
 
+        <h2 class="nhsuk-heading-m">
+          Your NHS login contact details
+        </h2>
+
         <p>
-        	Email address from NHS login <br> name@email.com
+          These details are taken from your NHS login account. NHS Test and Trace will use them to send you an email and text message so you can complete the next step.
         </p>
 
         <p>
-          UK mobile number from NHS login <br> 07890 123456
+        	<b>Email address</b> <br> name@email.com
+        </p>
+
+        <p>
+          <b>Mobile number</b> <br> 07890 123456
         </p>
 
         {{ radios({
@@ -59,7 +67,7 @@
             }
           },
           "hint": {
-            "text": "This does not affect your application. It is used by NHS Test and Trace to help them provide a suitable service to you."
+            "text": "NHS Test and Trace will use this information to provide the right service to you."
           },
           "items": [
             {

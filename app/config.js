@@ -2,7 +2,7 @@
 
 module.exports = {
   // Service name
-  serviceName: 'Apply for a Test and Trace Support Payment',
+  serviceName: 'Check if you can apply for a Test and Trace Support Payment',
 
   step1Label: 'Confirm who you are with NHS login',
   step2Label: 'Enter personal details',
