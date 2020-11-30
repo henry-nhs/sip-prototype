@@ -19,7 +19,7 @@
         </h1>
 
         {{ insetText({
-          "HTML": "<p>These details will be sent to NHS Test and Trace so they can carry out some checks.</p><p>None of your personal details will be given to the app.</p>"
+          "HTML": "<p>None of your personal details will be given to the app.</p>"
       }) }}
         
         {{ input({
@@ -40,23 +40,39 @@
           "value": data["last-name"]
         }) }}
 
-        {{ input({
-          "label": {
-            "text": "Email address"
-          },
-          "id": "email-address",
-          "name": "email-address",
-          "value": data["email-address"]
-        }) }}
+        <p>
+        	Email address from NHS login <br> name@email.com
+        </p>
 
-        {{ input({
-          "label": {
-            "text": "UK mobile number"
+        <p>
+          UK mobile number from NHS login <br> 07890 123456
+        </p>
+
+        {{ radios({
+          "idPrefix": "18-over",
+          "name": "18-over",
+          "fieldset": {
+            "legend": {
+              "text": "Are you 18 or over?",
+              "classes": "nhsuk-fieldset__legend--m",
+              "isPageHeading": false
+            }
           },
-          "id": "phone-number",
-          "name": "phone-number",
-          "type": "tel",
-          "value": data["phone-number"]
+          "hint": {
+            "text": "This does not affect your application. It is used by NHS Test and Trace to help them provide a suitable service to you."
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              "checked": checked('18-over', 'yes')
+            },
+            {
+              "value": "no",
+              "text": "No",
+              "checked": checked('18-over', 'no')
+            }
+          ]
         }) }}
 
           <div class="nhsuk-do-dont-list sip-info-card">
