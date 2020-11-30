@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Before you use NHS login" %}
+
+{% block pageTitle %}
+  {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+        <p>
+          Please note that if you access our service using your NHS login details, the identity verification services are managed by NHS Digital.
+        </p><p>
+          NHS Digital is the controller for any personal information you provided to NHS Digital to get an NHS login account and verify your identity, and uses that personal information solely for that single purpose. 
+        </p>
+        <p>
+          For this personal information, our role is a “processor” only and we must act under the instructions provided by NHS Digital (as the “controller”) when verifying your identity.
+        </p>
+        <p>
+          Read <a href="https://access.login.nhs.uk/terms-and-conditions" target="_blank">NHS Digital’s Privacy Notice and Terms and Conditions</a> for more information. This restriction does not apply to the personal information you provide to us separately.
+        </p>
+        <form action="/nhs-login">
+          {{ button({
+              "classes": "button--nhs-login",
+              "text": "Continue with NHS login"
+          }) }}
+        </form>
+    </div>
+</div>
+
+{% endblock %}

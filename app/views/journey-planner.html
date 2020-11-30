@@ -60,15 +60,14 @@
             </div>
         </div>
 
-        <form action="/nhs-login">
+        <form action="/nhs-login-start">
 
             {{ insetText({
-                "HTML": "<p>If you are ready to start, click the button below to log in or register with NHS login.</p><p><a href='https://access.login.nhs.uk/privacy' target='_blank'>NHS login privacy notice</a></p>"
+                "HTML": "<p>If you are ready to start, click the button below to log in or register with NHS login.</p>"
             }) }}
 
             {{ button({
-                "classes": "button--nhs-login",
-                "text": "Continue with NHS login"
+                "text": "Continue"
             }) }}
         </form>
 
