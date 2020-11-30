@@ -8,6 +8,21 @@
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
 
+#nhsuk-cookie-banner .nhsuk-cookie-banner {
+    background: white;
+    position: relative;
+    box-shadow: 0 0 4px 0 #212b32;
+    padding: 24px 0 19px;
+    width: 100%;
+    z-index: 1;
+}
+
+#nhsuk-cookie-banner ul, #nhsuk-cookie-banner li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .sip-info-card {
     svg {
         display: none;

@@ -21,6 +21,11 @@
 <!-- Header goes inside the header block -->
 <!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
 {% block header %}
+  
+  {% if showsCookie %}
+  {% include "includes/cookiebanner.html" %}
+  {% endif %}
+
   {% if falseServiceName %}
   {{ header({
     "service": {
