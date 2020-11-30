@@ -1,0 +1,192 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Showing errors in page" %}
+
+{% block pageTitle %}
+  Error: {{pageHeading}} | {{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        {% set errorMessages = [
+          'Select if you live in England or Wales',
+          'Select your employment status',
+          'Select yes if you are able to work from home',
+          'Select yes if you will lose income as a result of self-isolating',
+          'Select yes if you receive any of the benefits',
+          'You need to understand and accept this information',
+          'Enter your first name',
+          'Enter your last name',
+          'Select yes if you are 18 or over',
+          'You need to understand that you will now be legally required to self-isolate'
+        ] %}
+
+
+        {{ errorSummary({
+          "titleText": "There is a problem",
+          "errorList": [
+            {
+              "text": errorMessages[0],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[1],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[2],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[3],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[4],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[5],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[6],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[7],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[8],
+              "href": "#name"
+            },
+            {
+              "text": errorMessages[9],
+              "href": "#name"
+            }
+          ]
+        }) }}
+
+        <h1 class="nhsuk-heading-xl">
+            {{pageHeading}}
+        </h1>
+
+        <p>
+          Listed here are the form components within the prototype and how they should look in an errored state. Note that:
+        </p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>
+            "Error:" is prepended to the page title
+          </li>
+          <li>
+            The error summary should appear above the H1
+          </li>
+          <li>
+            Each error should link to the form field which is causing the error
+          </li>
+          <li>
+            The input should also show the same error message which is in the summary
+          </li>
+          <li>
+            Keyboard focus should be on the error summary
+          </li>
+          <li>
+            Use the following styles for the various components in the service
+          </li>
+        </ul>
+
+        <h2 class="nhsuk-heading-l">
+          Example radio button error
+        </h2>
+
+        <p>
+          Use this style for all radio buttons in the service, with the error messages as they are in the summary at the top of the page.
+        </p>
+
+        {{ radios({
+          "idPrefix": "elig-england",
+          "name": "elig-england",
+          "errorMessage": {
+            "text": errorMessages[0]
+          },
+          "fieldset": {
+            "legend": {
+              "text": "Do you live in England or Wales?",
+              "classes": "nhsuk-fieldset__legend--l",
+              "isPageHeading": true
+            }
+          },
+          "items": [
+            {
+              "value": "england",
+              "text": "England"
+            },
+            {
+              "value": "wales",
+              "text": "Wales"
+            }
+          ]
+        }) }}
+
+        <hr>
+
+        <h2 class="nhsuk-heading-l">
+          Example single checkbox error
+        </h2>
+
+        <p>
+          Use this style for all single checkboxes in the service, with the error messages as they are in the summary at the top of the page.
+        </p>
+
+        {{ checkboxes({
+          "idPrefix": "agree",
+          "name": "agree",
+          "fieldset": {
+              "legend": {
+              "text": 'Do you understand and accept this information?',
+              "isPageHeading": false,
+              "classes": 'nhsuk-u-visually-hidden'
+              }
+          },
+          "errorMessage": {
+            "text": errorMessages[5]
+          },
+          "items": [
+              {
+              "value": "true",
+              "html": "I understand and accept this information"
+              }
+          ]
+          }) }}
+
+          <hr>
+
+        <h2 class="nhsuk-heading-l">
+          Example text input error
+        </h2>
+
+        <p>
+          Use this style for all input boxes in the service, with the error messages as they are in the summary at the top of the page.
+        </p>
+
+        {{ input({
+          "label": {
+            "text": "First name"
+          },
+          "id": "first-name",
+          "name": "first-name",
+          "errorMessage": {
+            "text": errorMessages[6]
+          }
+        }) }}
+
+    </div>
+</div>
+
+{% endblock %}
