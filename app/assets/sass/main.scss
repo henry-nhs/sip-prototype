@@ -8,6 +8,14 @@
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
 
+.nhsuk-header__logo--only {
+    margin-right: 1em;
+}
+
+.nhsuk-header__transactional-service-name {
+    padding-left: 0;
+}
+
 #nhsuk-cookie-banner .nhsuk-cookie-banner {
     background: white;
     position: relative;
